@@ -1,0 +1,137 @@
+/* Minimal dark style */
+:root {
+  --bg: #0f1115;
+  --panel: #151821;
+  --text: #e8e8ea;
+  --muted: #b2b2b7;
+  --accent: #f4f07a;
+  --accent-2: #9effce;
+  --border: #2a2e3b;
+  --shadow: 0 10px 30px rgba(0,0,0,.45), inset 0 0 0 1px var(--border);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';
+  background: radial-gradient(1200px 600px at 20% -10%, #1b2030 0%, #10121a 35%, var(--bg) 70%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 980px;
+  margin: 32px auto 64px;
+  padding: 0 16px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: .02em;
+  margin: 0;
+  color: var(--text);
+  text-shadow: 0 2px 0 #000;
+}
+.subtitle {
+  margin-top: 6px;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.panel {
+  background: linear-gradient(180deg, #141824, #0f1219);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.cron-box {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  background: #0d0f15;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid var(--border);
+}
+
+.cron-input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--accent-2);
+  padding: 6px 10px;
+  font-size: 22px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.btns { display: flex; gap: 8px; }
+.btn {
+  border: 1px solid var(--border);
+  background: #1a1f2d;
+  color: var(--text);
+  padding: 8px 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .04s ease, border-color .2s ease;
+}
+.btn:hover { transform: translateY(-1px); border-color: #3a3f4f; }
+.btn.primary { background: #1e2433; }
+.btn.secondary { background: #171c28; }
+
+.hint { margin: 10px 2px 0; color: var(--muted); font-size: 13px; }
+.error { color: #ff8181; min-height: 1.2em; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.legend { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+.legend code { color: var(--accent-2); }
+
+.human {
+  font-size: 15px;
+  color: var(--muted);
+  min-height: 2em;
+}
+
+.runs h4 {
+  margin: 12px 0 8px;
+}
+.next-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.footer {
+  margin-top: 22px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer a { color: var(--accent); text-decoration: none; }
