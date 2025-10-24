@@ -24,8 +24,6 @@ A tiny static web app (no dependencies) that lets you type a 5‑field cron expr
 - `7` for weekday is treated as Sunday as well.
 - This is a minimal tool and does not implement advanced cron quirks (like `L`, `W`, `#` occurrences)
 
--------
-
 ## Deployment
 
 <img src="img_1.png" alt="img" width="600">
