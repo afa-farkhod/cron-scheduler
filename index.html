@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cron Scheduler — Minimal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1 class="title"><span>At&nbsp;<span id="human-time">--:--</span>.</span></h1>
+      <div class="subtitle" id="next-run-subtitle">next at —</div>
+    </header>
+
+    <section class="panel">
+      <div class="cron-box">
+        <input id="cron-input" class="cron-input" spellcheck="false" aria-label="Cron expression"
+               placeholder="*/5 9-17 * * 1-5" />
+        <div class="btns">
+          <button id="random-btn" class="btn secondary" title="Random example">random</button>
+          <button id="copy-btn" class="btn primary" title="Copy cron">Copy</button>
+        </div>
+      </div>
+      <p class="hint">minute&nbsp;&nbsp;hour&nbsp;&nbsp;day&nbsp;&nbsp;month&nbsp;&nbsp;weekday</p>
+      <p class="error" id="error"></p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Expression helper</h3>
+        <ul class="legend">
+          <li><code>*</code> any value</li>
+          <li><code>a,b,c</code> list</li>
+          <li><code>a-b</code> range</li>
+          <li><code>*/n</code> every n</li>
+          <li>Month names: <code>jan</code>…<code>dec</code></li>
+          <li>Weekdays: <code>sun</code>…<code>sat</code> (0 or 7 = sun)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Preview</h3>
+        <div id="human-text" class="human"></div>
+        <div class="runs">
+          <h4>Next 5 runs</h4>
+          <ol id="next-list" class="next-list"></ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Client‑side, no data leaves your browser.</span>
+      <span><a href="https://en.wikipedia.org/wiki/Cron" target="_blank" rel="noreferrer">What is cron?</a></span>
+      <span>Built with plain HTML/CSS/JS.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
